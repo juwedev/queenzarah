@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+
+#sessionTxt { width:380px; height:392px; padding:10px; margin-right: auto; margin-left: auto; background-image:url('../images/diva_sjam.jpg');
+border-top-right-radius: 9px; border-bottom-right-radius: 9px; border-bottom-left-radius: 9px; border-top-left-radius: 9px; -moz-border-radius-topright: 9px; -moz-border-radius-bottomright: 9px; -moz-border-radius-bottomleft: 9px; -moz-border-radius-topleft: 9px; -webkit-border-top-right-radius: 9px; -webkit-border-bottom-right-radius: 9px; -webkit-border-bottom-left-radius: 9px; -webkit-border-top-left-radius: 9px; }
+#twitter {width:400px; margin-top:20px; margin-right: auto; margin-left: auto; font:15px Helvetica,Arial,sans-serif; background-color:#4b4b4c; padding-top:10px;
+border-top-right-radius: 9px; border-bottom-right-radius: 9px; border-bottom-left-radius: 9px; border-top-left-radius: 9px; -moz-border-radius-topright: 9px; -moz-border-radius-bottomright: 9px; -moz-border-radius-bottomleft: 9px; -moz-border-radius-topleft: 9px; -webkit-border-top-right-radius: 9px; -webkit-border-bottom-right-radius: 9px; -webkit-border-bottom-left-radius: 9px; -webkit-border-top-left-radius: 9px;}
+#gallery {width:500px; height:400px; margin-left: auto; margin-right: auto; padding:10px; background-color:black;}
+#down {width:450px; height:180px;  margin-top:270px; margin-left: auto; margin-right: auto; background: rgba(255,0, 0, 0.4); border:1px solid black; padding:10px;
+border-top-right-radius: 9px; border-bottom-right-radius: 9px; border-bottom-left-radius: 9px; border-top-left-radius: 9px; -moz-border-radius-topright: 9px; -moz-border-radius-bottomright: 9px; -moz-border-radius-bottomleft: 9px; -moz-border-radius-topleft: 9px; -webkit-border-top-right-radius: 9px; -webkit-border-bottom-right-radius: 9px; -webkit-border-bottom-left-radius: 9px; -webkit-border-top-left-radius: 9px;}
+#videoheader { width:348px; height:78px; padding:5px; margin-left:auto; margin-right:auto; margin-top:0px; margin-bottom:6px; background: rgba(0,0, 255, 0.4); border:1px solid black; 
+border-top-right-radius: 9px; border-bottom-right-radius: 9px; border-bottom-left-radius: 9px; border-top-left-radius: 9px; -moz-border-radius-topright: 9px; -moz-border-radius-bottomright: 9px; -moz-border-radius-bottomleft: 9px; -moz-border-radius-topleft: 9px; -webkit-border-top-right-radius: 9px; -webkit-border-bottom-right-radius: 9px; -webkit-border-bottom-left-radius: 9px; -webkit-border-top-left-radius: 9px;} 
+#video {margin-bottom:30px;} 
