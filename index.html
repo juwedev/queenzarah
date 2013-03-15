@@ -29,12 +29,18 @@
 </head>
 <body>
 <!-- Beginn Startseite -->
-<div data-role="page" data-theme="a">
+<div id="start" data-role="page" data-theme="a" style="height:100%;">
+    <script type="text/javascript">
+		$(document).delegate('#start', 'pageshow', function () {
+		var the_height = ($(window).height() - $(this).find('[data-role="header"]').height() - $(this).find('[data-role="footer"]').height());
+		$(this).height($(window).height()).find('[data-role="content"]').height(the_height + 10);
+		});
+	</script>
     <div data-role="header" data-theme="a">
     	<h1>Queen Diva Zarah</h1>
     </div>
     
-    <div data-role="content" data-theme="a" style="height:520px; background-image:url('images/diva_do.jpg');">
+    <div id="starter" data-role="content" data-theme="a">
         <a href="#portraitseite" data-role="button" data-transition="flip">Portrait</a>
         <a href="#gallerymain" data-role="button" data-transition="flip">Gallery</a>	 
         <a href="#videoseite" data-role="button" data-transition="flip">Videos</a>
@@ -47,29 +53,41 @@
 <!-- Ende Startseite -->
 <!-- Beginn Portraiseite -->
 <div data-role="page" id="portraitseite" data-theme="a">
-	<div data-role="header" data-theme="a">
+	<script type="text/javascript">
+		$(document).delegate('#portraitseite', 'pageshow', function () {
+		var the_height = ($(window).height() - $(this).find('[data-role="header"]').height() - $(this).find('[data-role="footer"]').height());
+		$(this).height($(window).height()).find('[data-role="content"]').height(the_height + 10);
+		});
+	</script>
+    <div data-role="header" data-theme="a">
     	<a href="index.html" data-rel="back" data-icon="arrow-l" data-theme="a"></a>
     	<h1>Portrait</h1>        
     </div>
-    <div data-role="content" data-theme="a" style="height:520px; background-image:url('images/divaredleft.jpg');">
-     <center><a href="#viewvideo" data-role="button" data-rel="dialog" data-inline="true" data-theme="a">Watch Movie Trailer</a></center>
+    <div data-role="content" id="portraitcontent" data-theme="a">
+     <center><a href="#viewvideo" data-role="button" data-rel="dialog" data-inline="true" data-theme="a">Movie ansehen</a></center>
      <div id="down">
       I am a young but experienced fetish lady who will rob you of your mind! Your darkest fantasies could become a reality for me.      		      Nothing is unthinkable. So think of something good, what you wish you, because then it is too late, when you're feeling of lust      overwhelmed! ...<i>Your Mistress Diva Zarah</i>
-     <p><center><a href="mailto:kontaktdivazarah@googlemail.com" data-role="button" data-inline="true" data-theme="a">Send E-Mail</a></center></p>
+     <p><center><a href="mailto:kontaktdivazarah@googlemail.com" data-role="button" data-inline="true" data-theme="a">E-Mail senden</a></center></p>
      </div>
     </div>
-    <div data-role="footer" data-theme="a">
-    	<h1><a href="index.html" style="color:#FFFFFF; text-decoration:none;">www.mistress-diva-zarah.com</h1></div></a></h1>
+    <div data-role="footer" data-theme="a" data-position="fixed" role="contentinfo">
+    	<h1>www.mistress-diva-zarah.com</h1>
     </div>
 </div>
 <!--Ende Portrait Seite -->
 <!-- Beginn Fotoseite -->
 <div data-role="page" id="gallerymain" style="background-color:black;" data-theme="a">
-	<div data-role="header" data-theme="a">
+	<script type="text/javascript">
+		$(document).delegate('#gallerymain', 'pageshow', function () {
+		var the_height = ($(window).height() - $(this).find('[data-role="header"]').height() - $(this).find('[data-role="footer"]').height());
+		$(this).height($(window).height()).find('[data-role="content"]').height(the_height);
+		});
+	</script>
+    <div data-role="header" data-theme="a">
 		<a href="index.html" data-rel="back" data-icon="arrow-l" data-theme="a"></a>
     	<h1>Fetish BDSM Gallery</h1>        
     </div>
-    <div data-role="content" style="height:490px; background-image:url('images/esplanad1.jpg');" data-theme="a">
+    <div data-role="content" id="gallerymaincontent" data-theme="a">
  	 <div data-role="navbar" data-theme="a">
     <ul>
         <li><a href="#gallery1" class="ui-btn-active">Gallery One</a></li>
@@ -154,16 +172,22 @@
 <!-- Ende Gallery 2 -->
 <!--Beginn Video Seite -->
 <div data-role="page" id="videoseite" data-theme="a">
-	<div data-role="header" data-theme="a">
+	<script type="text/javascript">
+		$(document).delegate('#videoseite', 'pageshow', function () {
+		var the_height = ($(window).height() - $(this).find('[data-role="header"]').height() - $(this).find('[data-role="footer"]').height());
+		$(this).height($(window).height()).find('[data-role="content"]').height(the_height);
+		});
+	</script>
+    <div data-role="header" data-theme="a">
     	<a href="index.html" data-rel="back" data-icon="arrow-l" data-theme="a"></a>
     	<h1>Diva Zarah Video</h1>
     </div>
-    <div data-role="content" data-theme="a"  style="height:580px; background-image:url('images/stiefel.jpg');">             
+    <div data-role="content" id="videoseitecontent" data-theme="a">             
          
  <style>
   div#video {margin-left: auto; margin-right: auto; width:300px; cursor:pointer; }  
  </style>       
-         <div id="videoheader">The 15 latest BDSM videos from Diva Zarah on her Website: <strong>www.mistress-diva-zarah.com</strong> Here you can see her video list with single descriptions. You can watch it on her Web</div>      
+         <div id="videoheader">The 15 latest BDSM videos from Diva Zarah on her Website: <strong>www.mistress-diva-zarah.com</strong> Here you can see my video list with all single descriptions. You can watch it on my Web</div>      
          <div id="video">        
           <script type="text/javascript">		    			
 			function getList(){
@@ -228,11 +252,17 @@
 <!--Ende Videoseite -->
 <!--Beginn Sessionseite -->
 <div data-role="page" id="sessionseite" data-theme="a">
-	<div data-role="header" data-theme="a">
+		<script type="text/javascript">
+			$(document).delegate('#sessionseite', 'pageshow', function () {
+			var the_height = ($(window).height() - $(this).find('[data-role="header"]').height() - $(this).find('[data-role="footer"]').height());
+			$(this).height($(window).height()).find('[data-role="content"]').height(the_height);
+			});
+		</script>
+    <div data-role="header" data-theme="a">
     	<a href="index.html" data-rel="back" data-icon="arrow-l" data-theme="a"></a>
     	<h1>My BDSM Session</h1>
     </div>
-    <div data-role="content" data-theme="a">
+    <div data-role="content" id="sessionseitecontent" data-theme="a">
 
     <div id="sessionTxt">
     <p><center>What is possible in one session:</center></p><br><br>
