@@ -11,29 +11,11 @@
 <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 <script src="http://www.mistress-diva-zarah.com/js/json2.js"></script>
 <script type="text/javascript" src="js/code.photoswipe.jquery-3.0.5.min.js"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="js/jquery.ui.map.js"></script>
 <title>Mistress Diva Zarah</title>
 <script type="text/javascript">
-function initialize() {
-/*Standard Setup der Google Map*/  
-var latlng = new google.maps.LatLng(49.45317304815742, 11.076686382293701);
-var myOptions = {       
-        zoom: 13,       
-        center: latlng,
-        mapTypeId: google.maps.MapTypeId.ROADMAP      
-};
-
-    
-var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-var marker = new google.maps.Marker({
-                position: latlng, 
-                map: map, 
-                title: "You are here :)"
-            }); 
-        }
-       
-
- 
+  
  (function(window, $, PhotoSwipe)
  {
   $(document).ready(function()
@@ -47,7 +29,7 @@ var marker = new google.maps.Marker({
  }(window, window.jQuery, window.Code.PhotoSwipe));
 </script>
 </head>
-<body onload="initialize()">
+<body>
 <!-- Beginn Startseite -->
 <div id="start" data-role="page" data-theme="a" style="height:100%;">
     <script type="text/javascript">
@@ -65,7 +47,7 @@ var marker = new google.maps.Marker({
         <a href="#gallerymain" data-role="button" data-transition="flip">Gallery</a>	 
         <a href="#videoseite" data-role="button" data-transition="flip">Videos</a>
         <a href="#sessionseite" data-role="button" data-transition="flip">My Session</a>
-         <a href="#geocode" data-role="button" data-transition="flip" data-theme="b">GeoCoder & Domina Finder</a>		
+         <a href="map.html" data-role="button" data-transition="flip" data-theme="b">GeoCoder & Domina Finder</a>		
     </div>
     <div data-role="footer" data-theme="a">
     	<h1>www.mistress-diva-zarah.com</h1>
@@ -323,7 +305,7 @@ var marker = new google.maps.Marker({
     </div>
 </div>
 <!--Ende Session Seite-->
-<!-- beginn GeoCoder -->
+<!-- beginn GeoCoder 
 <div data-role="page" id="geocode" data-theme="a">
 	<script type="text/javascript">
 			$(document).delegate('#geocode', 'pageshow', function () {
@@ -336,14 +318,37 @@ var marker = new google.maps.Marker({
     	<h1>Google Maps</h1>   
     </div>
     <div data-role="content" data-theme="a">
-     <div id="map_canvas" style="height:100%; width:100%;">
-     
+     <div id="map_canvas" class="gmap">
+      <script type="text/javascript">
+        var map1, latlng1, options1;
+        function initialize() {
+
+            latlng1 = new google.maps.LatLng(40.716948, -74.003563);
+            options1 = { zoom: 14, center: latlng1, mapTypeId: google.maps.MapTypeId.ROADMAP };
+            map1 = new google.maps.Map(document.getElementById("map_canvas"), options1);
+
+        }
+        $('.page-map1').live("pagecreate", function() {
+
+            initialize();
+
+        });
+
+        $('.page-map1').live('pageshow',function(){
+
+            //console.log("test");
+            google.maps.event.trigger(map1, 'resize');
+            map1.setOptions(options1); 
+
+        });
+
+    </script> 
      </div>
     </div>
     <div data-role="footer" data-theme="a">
      	<h1><a href="index.html" style="color:#FFFFFF; text-decoration:none;">www.mistress-diva-zarah.com</a></h1> 
     </div>
-</div>
+</div> -->
 <!-- Ende Seite GeoCoder & Domina Finder -->
 <!-- Beginn Video Viewer -->    
 <div data-role="page" id="viewvideo" data-theme="a">

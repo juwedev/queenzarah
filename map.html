@@ -1,0 +1,33 @@
+    <div data-role="page" data-theme="a" id="page-geo" class="gmap" style="width:100%; height:100%;">    
+    <div data-role="header"><h1>Geo Maps Finder</h1>
+    <a href="index.html" data-rel="back" data-icon="arrow-l" data-theme="a"></a>
+    </div>
+    <div data-role="content" style="width:100%; height:100%; padding:0;"> 
+        <div id="map_canvas" class="gmap" style="width:100%; height:100%;">
+         <script type="text/javascript">
+			var map1, latlng1, options1;
+			function initialize() {
+	
+				latlng1 = new google.maps.LatLng(49.45320094609725,11.07670783996582);
+				options1 = { zoom: 14, center: latlng1, mapTypeId: google.maps.MapTypeId.ROADMAP };
+				map1 = new google.maps.Map(document.getElementById("map_canvas"), options1);
+	
+			}
+			$('.gmap').live("pagecreate", function() {	
+				initialize();	
+			});
+			$('.gmap').live('pageshow',function(){
+
+            //console.log("test");
+            google.maps.event.trigger(map1, 'resize');
+            map1.setOptions(options1); 
+
+        });	
+
+    </script> 
+        </div>
+    </div>
+    <div data-role="footer" data-theme="a">
+ 		<h1><a href="index.html" style="color:#FFFFFF; text-decoration:none;">www.mistress-diva-zarah.com</a></h1>
+    </div>
+    </div>
