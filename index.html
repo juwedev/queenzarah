@@ -14,14 +14,16 @@
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <title>Mistress Diva Zarah</title>
 <script type="text/javascript">
-function initialize(coords) {
+function initialize() {
 /*Standard Setup der Google Map*/  
-var latlng = new google.maps.LatLng(coords.latitude, coords.longitude);
+var latlng = new google.maps.LatLng(49.45317304815742, 11.076686382293701);
 var myOptions = {       
         zoom: 13,       
         center: latlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP      
-}; 
+};
+
+    
 var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 var marker = new google.maps.Marker({
                 position: latlng, 
@@ -29,12 +31,7 @@ var marker = new google.maps.Marker({
                 title: "You are here :)"
             }); 
         }
- 
-        navigator.geolocation.getCurrentPosition(function(position){ 
-            initialize(position.coords);
-        }, function(){
-            document.getElementById('pos').innerHTML = 'Deine Position konnte leider nicht ermittelt werden';
-        });
+       
 
  
  (function(window, $, PhotoSwipe)
@@ -50,7 +47,7 @@ var marker = new google.maps.Marker({
  }(window, window.jQuery, window.Code.PhotoSwipe));
 </script>
 </head>
-<body onload="initialize(coords)">
+<body onload="initialize()">
 <!-- Beginn Startseite -->
 <div id="start" data-role="page" data-theme="a" style="height:100%;">
     <script type="text/javascript">
