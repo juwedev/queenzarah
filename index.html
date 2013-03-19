@@ -11,9 +11,32 @@
 <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 <script src="http://www.mistress-diva-zarah.com/js/json2.js"></script>
 <script type="text/javascript" src="js/code.photoswipe.jquery-3.0.5.min.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <title>Mistress Diva Zarah</title>
 <script type="text/javascript">
-  
+function initialize(coords) {
+/*Standard Setup der Google Map*/  
+var latlng = new google.maps.LatLng(coords.latitude, coords.longitude);
+var myOptions = {       
+        zoom: 13,       
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP      
+}; 
+var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+var marker = new google.maps.Marker({
+                position: latlng, 
+                map: map, 
+                title: "You are here :)"
+            }); 
+        }
+ 
+        navigator.geolocation.getCurrentPosition(function(position){ 
+            initialize(position.coords);
+        }, function(){
+            document.getElementById('pos').innerHTML = 'Deine Position konnte leider nicht ermittelt werden';
+        });
+
+ 
  (function(window, $, PhotoSwipe)
  {
   $(document).ready(function()
@@ -27,7 +50,7 @@
  }(window, window.jQuery, window.Code.PhotoSwipe));
 </script>
 </head>
-<body>
+<body onload="initialize(coords)">
 <!-- Beginn Startseite -->
 <div id="start" data-role="page" data-theme="a" style="height:100%;">
     <script type="text/javascript">
@@ -44,7 +67,8 @@
         <a href="#portraitseite" data-role="button" data-transition="flip">Portrait</a>
         <a href="#gallerymain" data-role="button" data-transition="flip">Gallery</a>	 
         <a href="#videoseite" data-role="button" data-transition="flip">Videos</a>
-        <a href="#sessionseite" data-role="button" data-transition="flip">My Session</a>		
+        <a href="#sessionseite" data-role="button" data-transition="flip">My Session</a>
+         <a href="#geocode" data-role="button" data-transition="flip" data-theme="b">GeoCoder & Domina Finder</a>		
     </div>
     <div data-role="footer" data-theme="a">
     	<h1>www.mistress-diva-zarah.com</h1>
@@ -301,7 +325,30 @@
     	<h1><a href="index.html" style="color:#FFFFFF; text-decoration:none;">www.mistress-diva-zarah.com</a></h1>
     </div>
 </div>
-<!--Ende Session Seite-->    
+<!--Ende Session Seite-->
+<!-- beginn GeoCoder -->
+<div data-role="page" id="geocode" data-theme="a">
+	<script type="text/javascript">
+			$(document).delegate('#geocode', 'pageshow', function () {
+			var the_height = ($(window).height() - $(this).find('[data-role="header"]').height() - $(this).find('[data-role="footer"]').height());
+			$(this).height($(window).height()).find('[data-role="content"]').height(the_height);
+			});			
+		</script>
+    <div data-role="header" data-theme="a">
+    	<a href="index.html" data-rel="back" data-icon="arrow-l" data-theme="a"></a>
+    	<h1>Google Maps</h1>   
+    </div>
+    <div data-role="content" data-theme="a">
+     <div id="map_canvas" style="height:100%; width:100%;">
+     
+     </div>
+    </div>
+    <div data-role="footer" data-theme="a">
+     	<h1><a href="index.html" style="color:#FFFFFF; text-decoration:none;">www.mistress-diva-zarah.com</a></h1> 
+    </div>
+</div>
+<!-- Ende Seite GeoCoder & Domina Finder -->
+<!-- Beginn Video Viewer -->    
 <div data-role="page" id="viewvideo" data-theme="a">
 	<div data-role="header" data-theme="c">
     	<a href="index.html" data-rel="back" data-icon="arrow-l" data-theme="a"></a>
