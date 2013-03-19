@@ -1,4 +1,10 @@
-    <div data-role="page" data-theme="a" id="page-geo" class="gmap" style="width:100%; height:100%;">    
+    <div data-role="page" data-theme="a" id="geocode" class="gmap" style="width:100%; height:100%;">    
+    <script type="text/javascript">
+			$(document).delegate('#geocode', 'pageshow', function () {
+			var the_height = ($(window).height() - $(this).find('[data-role="header"]').height() - $(this).find('[data-role="footer"]').height());
+			$(this).height($(window).height()).find('[data-role="content"]').height(the_height);
+			});			
+		</script>
     <div data-role="header"><h1>Geo Maps Finder</h1>
     <a href="index.html" data-rel="back" data-icon="arrow-l" data-theme="a"></a>
     </div>
@@ -30,4 +36,4 @@
     <div data-role="footer" data-theme="a">
  		<h1><a href="index.html" style="color:#FFFFFF; text-decoration:none;">www.mistress-diva-zarah.com</a></h1>
     </div>
-    </div>
+   </div>
