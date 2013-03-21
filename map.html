@@ -5,8 +5,8 @@
 			$(this).height($(window).height()).find('[data-role="content"]').height(the_height);
 			});			
 		</script>
-    <div data-role="header"><h1>Geo Maps Finder</h1>
-    <a href="index.html" data-rel="back" data-icon="arrow-l" data-theme="a"></a>
+    <div data-role="header"><h1>Maps Domina Finder</h1>
+    <a href="file:///D|/Mobile/zarahapp/index.html" data-rel="back" data-icon="arrow-l" data-theme="a"></a>
     </div>
     <div data-role="content" style="width:100%; height:100%; padding:0;"> 
         <div id="map_canvas" class="gmap" style="width:100%; height:100%;">
@@ -17,6 +17,12 @@
 				latlng1 = new google.maps.LatLng(49.45320094609725,11.07670783996582);
 				options1 = { zoom: 14, center: latlng1, mapTypeId: google.maps.MapTypeId.ROADMAP };
 				map1 = new google.maps.Map(document.getElementById("map_canvas"), options1);
+				 var marker = new google.maps.Marker({
+     			 position: latlng1, 
+      			 map: map1, 
+     			 title:"Mistress Diva Zarahs loves Starbucks!"
+  });
+
 	
 			}
 			$('.gmap').live("pagecreate", function() {	
@@ -34,6 +40,6 @@
         </div>
     </div>
     <div data-role="footer" data-theme="a">
- 		<h1><a href="index.html" style="color:#FFFFFF; text-decoration:none;">www.mistress-diva-zarah.com</a></h1>
+ 		<h1><a href="file:///D|/Mobile/zarahapp/index.html" style="color:#FFFFFF; text-decoration:none;">www.mistress-diva-zarah.com</a></h1>
     </div>
    </div>
