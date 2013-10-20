@@ -3,13 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+<link rel="stylesheet" href="css/jquery.mobile-1.3.3.min.css" />
 <link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
 <link rel="stylesheet" href="css/zarah.css" />
 <script type="text/javascript" src="js/klass.min.js"></script>
-<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-<script src="http://www.mistress-diva-zarah.com/js/json2.js"></script>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery.mobile-1.3.2.min.js"></script>
+<script type="text/javascript" src="
+js/json2.js"></script>
+<script type="text/javascript" src="js/diva.js"></script>
 <script type="text/javascript" src="js/code.photoswipe.jquery-3.0.5.min.js"></script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <script type="text/javascript" src="js/jquery.ui.map.js"></script>
@@ -38,18 +40,23 @@
 		});
 	</script>
     <div data-role="header" data-theme="a">
-    	<h1>Queen Diva Zarah</h1>
+    	<h1><img src="images/krone.png">Queen Diva Zarah</h1>
     </div>
     
     <div id="starter" data-role="content" data-theme="a">
-        <a href="#portraitseite" data-role="button" data-transition="flip">Portrait</a>
-        <a href="#gallerymain" data-role="button" data-transition="flip">Gallery</a>	 
-        <a href="#videoseite" data-role="button" data-transition="flip">Videos</a>
-        <a href="#sessionseite" data-role="button" data-transition="flip">My Session</a>
-         <a href="map.html" data-role="button" data-transition="flip" data-theme="b">GeoCoder & Domina Finder</a>		
+        <div data-role="controlgroup" data-type="horizontal" align="center">
+			<a href="#portraitseite" data-role="button"  data-transition="flip" data-theme="b">Portrait</a>
+			<a href="#membership" data-role="button"  data-transition="flip" data-theme="b">Membership</a>
+			<a href="#videoseite" data-role="button"  data-transition="flip" data-theme="b">Videos</a>
+		</div>
+        <div data-role="controlgroup" data-type="horizontal" align="center">
+			<a href="#sessionseite" data-role="button"  data-transition="flip" data-theme="b"><img src="images/twitter.png">&nbsp;Session</a>
+			<a href="#gallerymain" data-role="button"  data-transition="flip" data-theme="b">Gallery</a>
+            <a href="map.html" data-role="button"  data-transition="flip" data-theme="b">GeoCode</a>			
+		</div>
     </div>
-    <div data-role="footer" data-theme="a">
-    	<h1>www.mistress-diva-zarah.com</h1>
+    <div data-role="footer" data-theme="a" id="footer1">
+    	<h1><a href="http://www.misress-diva-zarah.com">www.mistress-diva-zarah.com</a></h1>
     </div>
 </div>
 <!-- Ende Startseite -->
@@ -63,7 +70,7 @@
 	</script>
     <div data-role="header" data-theme="a">
     	<a href="index.html" data-rel="back" data-icon="arrow-l" data-theme="a"></a>
-    	<h1>Portrait</h1>        
+    	<h1><img src="images/krone.png">Portrait</h1>        
     </div>
     <div data-role="content" id="portraitcontent" data-theme="a">
      <center><a href="#viewvideo" data-role="button" data-rel="dialog" data-inline="true" data-theme="a">Watch Movie</a></center>
@@ -87,7 +94,7 @@
 	</script>
     <div data-role="header" data-theme="a">
 		<a href="index.html" data-rel="back" data-icon="arrow-l" data-theme="a"></a>
-    	<h1>Fetish BDSM Gallery</h1>        
+    	<h1><img src="images/krone.png">Fetish BDSM Gallery</h1>        
     </div>
     <div data-role="content" id="gallerymaincontent" data-theme="a">
  	 <div data-role="navbar" data-theme="a">
@@ -106,13 +113,14 @@
 <div data-role="page" id="gallery1" style="background-color:black;" data-theme="a">
 	<div data-role="header" data-theme="a">
     	<a href="index.html" data-rel="back" data-icon="arrow-l" data-theme="a"></a>
-    	<h1>Diva Zarah Photogallery</h1>
+    	<h1><img src="images/krone.png">Diva Zarah Photogallery</h1>
     </div>
     <div data-role="content" data-theme="a">
     	<div id="gallery">
     		<a href="gallery/full/diva1.jpg" rel="external"><img alt="Diva Zarah Image 1" src="gallery/thumb/diva1kl.jpg"></a>
    			<a href="gallery/full/diva2.jpg" rel="external"><img alt="Diva Zarah Image 2" src="gallery/thumb/diva2kl.jpg"></a>
             <a href="gallery/full/diva3.jpg" rel="external"><img alt="Diva Zarah Image 3" src="gallery/thumb/diva3kl.jpg"></a>
+             <a href="gallery/full/diva43.jpg" rel="external"><img alt="Diva Zarah Image 1" src="gallery/thumb/diva43kl.jpg"></a>
    			<a href="gallery/full/diva4.jpg" rel="external"><img alt="Diva Zarah Image 4" src="gallery/thumb/diva4kl.jpg"></a>
             <a href="gallery/full/diva5.jpg" rel="external"><img alt="Diva Zarah Image 5" src="gallery/thumb/diva5kl.jpg"></a>
             <a href="gallery/full/diva6.jpg" rel="external"><img alt="Diva Zarah Image 6" src="gallery/thumb/diva6kl.jpg"></a>
@@ -129,6 +137,7 @@
             <a href="gallery/full/diva17.jpg" rel="external"><img alt="Diva Zarah Image 15" src="gallery/thumb/diva17kl.jpg"></a>
             <a href="gallery/full/diva18.jpg" rel="external"><img alt="Diva Zarah Image 18" src="gallery/thumb/diva18kl.jpg"></a>
             <a href="gallery/full/diva19.jpg" rel="external"><img alt="Diva Zarah Image 19" src="gallery/thumb/diva19kl.jpg"></a>
+            <a href="gallery/full/diva42.jpg" rel="external"><img alt="Diva Zarah Image 1" src="gallery/thumb/diva42kl.jpg"></a>
     	</div>
     </div>
     <div data-role="footer" data-theme="a">
@@ -140,11 +149,12 @@
 <div data-role="page" id="gallery2" style="background-color:black;" data-theme="a">
 	<div data-role="header" data-theme="a">
     	<a href="index.html" data-rel="back" data-icon="arrow-l" data-theme="a"></a>
-    	<h1>Diva Zarah Photogallery</h1>
+    	<h1><img src="images/krone.png">Diva Zarah Photogallery</h1>
     </div>
     <div data-role="content" data-theme="a">
     	<div id="gallery">
-    		<a href="gallery/full/diva20.jpg" rel="external"><img alt="Diva Zarah Image 1" src="gallery/thumb/diva20kl.jpg"></a>
+    		<a href="gallery/full/diva41.jpg" rel="external"><img alt="Diva Zarah Image 1" src="gallery/thumb/diva41kl.jpg"></a>
+            <a href="gallery/full/diva20.jpg" rel="external"><img alt="Diva Zarah Image 1" src="gallery/thumb/diva20kl.jpg"></a>
    			<a href="gallery/full/diva21.jpg" rel="external"><img alt="Diva Zarah Image 2" src="gallery/thumb/diva21kl.jpg"></a>
             <a href="gallery/full/diva22.jpg" rel="external"><img alt="Diva Zarah Image 3" src="gallery/thumb/diva22kl.jpg"></a>
    			<a href="gallery/full/diva23.jpg" rel="external"><img alt="Diva Zarah Image 4" src="gallery/thumb/diva23kl.jpg"></a>
@@ -182,7 +192,7 @@
 	</script>
     <div data-role="header" data-theme="a">
     	<a href="index.html" data-rel="back" data-icon="arrow-l" data-theme="a"></a>
-    	<h1>Diva Zarah Video</h1>
+    	<h1><img src="images/krone.png">Diva Zarah Video</h1>
     </div>
     <div data-role="content" id="videoseitecontent" data-theme="a">             
          
@@ -252,6 +262,52 @@
     </div>
 </div>
 <!--Ende Videoseite -->
+<!-- Beginn membership -->
+<div data-role="page" id="membership" data-theme="a">
+		<script type="text/javascript">
+			$(document).delegate('#membership', 'pageshow', function () {
+			var the_height = ($(window).height() - $(this).find('[data-role="header"]').height() - $(this).find('[data-role="footer"]').height());
+			$(this).height($(window).height()).find('[data-role="content"]').height(the_height);
+			});
+		</script>
+    <div data-role="header" data-theme="a">
+    	<a href="index.html" data-rel="back" data-icon="arrow-l" data-theme="a"></a>
+    	<h1><img src="images/krone.png">Order Slave Paradise</h1>
+    </div>
+    <div data-role="content" id="membershipcont" data-theme="a">
+    <center><img src="images/en_kl.png">&nbsp;Subscribe as Member on Mistress Diva Zarahs <a href="http://www.mistress-diva-zarah.com">Website</a><br>
+    <img src="images/de_kl.png">&nbsp;Zugang Memberbereich auf  Mistress Diva Zarahs <a href="http://www.mistress-diva-zarah.com">Website</a><br>
+    </center><p>
+    <center>Touch Gift Cards/Geschenkgutschein<br><a href="https://www.amazon.de/gp/product/B0054PDOV8/gcrnsts"><img src="images/amazon.png"></a>&nbsp;&nbsp;
+    <a href="http://www.zalando.de/geschenkgutscheine/?wt_ga41=5671736146_32606366026&wt_gk41=Exact_5671736146_zalando+gutschein&gclid=COTk55i8k7oCFebJtAodnlQAkA"><img src="images/zalando.png"></a>
+    &nbsp;&nbsp;<a href="https://www.wertkartenverkauf.com/?pc=tqh9"><img src="images/paysafe.png"></a></center></p>
+     <div id="memberform">
+    <center><h3>Memberarea Order or send a gift</h3></center>   
+     <form id="subscribe_form">
+      <input type="hidden" name="stopper">
+      <label>Your E-Mail* (..I'll send Login-Data back to the E-Mail)<br>
+      <input type="text" name="email"></label>     
+      <label>Name or Alias<br>
+      <input type="text" name="name"></label>           
+      <label>30&#8364; Access Memberarea 1 month
+      <input type="checkbox" value="J" name="m30"></label>
+      <label>50&#8364; Acccess Memberarea 3 month
+      <input type="checkbox" value="J" name="m50"></label>
+      <label>100&#8364; Acccess Memberarea 12 month
+      <input type="checkbox" value="J" name="m100"></label><br>
+      <label><img src="images/en_kl.png">&nbspGift Certificate Code*, <img src="images/de_kl.png">&nbspGeschenk Gutschein Code*<br>
+      <input type="text" name="gift"></label>
+     </form>
+      <div id="results"></div>
+      <button onClick="sendSubscribe();" data-theme="c">Send</button><button onClick="$('#subscribe_form').get(0).reset();$('#results').html('');return false;" data-theme="c">Reset</button>
+     </div>
+     <center><h4>Get Full Member Video Access</h4></center>
+    </div>
+     <div data-role="footer" data-theme="a">
+    	<h1><a href="index.html" style="color:#FFFFFF; text-decoration:none;">www.mistress-diva-zarah.com</a></h1>
+    </div>
+</div>
+<!--Ende membership -->
 <!--Beginn Sessionseite -->
 <div data-role="page" id="sessionseite" data-theme="a">
 		<script type="text/javascript">
@@ -262,7 +318,7 @@
 		</script>
     <div data-role="header" data-theme="a">
     	<a href="index.html" data-rel="back" data-icon="arrow-l" data-theme="a"></a>
-    	<h1>My BDSM Session</h1>
+    	<h1><img src="images/krone.png">My BDSM Session</h1>
     </div>
     <div data-role="content" id="sessionseitecontent" data-theme="a">
 
@@ -271,33 +327,12 @@
     You can find me at all of the usual BDSM practices and Extremes. We will continue to conduct a preliminary conversation in which I get    to know you closer. Your boundaries and taboos are considered. Appointment at the following number:
     <br><br><center><strong>
     <span style="font:22px Helvetica,Arial; color:black;">Phone mobile: 0160 - 420 17 55</span></strong></center><br> <center><a href="mailto:kontaktdivazarah@googlemail.com" data-role="button" data-inline="true" data-theme="a">E-Mail senden</a></center><br>For details on appointments you can find on my website www.mistress-diva-zarah.com
+    <div class="twitter_set" style="margin-top: 30px;"><center>
+  	<a class="twitter-timeline" href="https://twitter.com/DIVAZARAH" data-widget-id="391273954721030144">Tweets von @DIVAZARAH</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div><!-- twitter container -->    
     </div>   	 
-        <div id="twitter">
-           <script type="text/javascript">
-		     $(document).ready(function(){	
-			 $.ajax({
-							type        : "GET",
-							url         : "http://search.twitter.com/search.json?q=DIVAZARAH&rpp=4&callback=?",
-							data        : "",
-							async: false,
-							contentType : "application/json; charset=utf-8",
-							dataType    : "jsonp",
-							success     : function(data) {																		   									 												 data = data['results'];
-												 var items = [];
-												 items.push('<center><strong>DIVAZARAH auf Twitter</strong>&nbsp;<img src="images/bird.gif" align="_bottom"></center>');
-												 items.push('<div><ul style="list-style-type:none;">');
-												 $.each(data, function(i,tweet){																																													                                             	 var str = tweet.created_at;
-												 var dat = str.split(" ");
-												 var datum = dat['1'] +' '+ dat['2'] +' '+ dat['3'] +','+ dat['4'];
-												 items.push('<li id="' + i + '">@' + tweet.from_user_name +' schreibt am, ' + datum +'<br><i><span style="color:#97dbdc;">"' + tweet.text +'"</span><br><br></i></li>');
-												 });
-												 items.push('</ul></div>');												
-												 $(items.join('')).appendTo('#twitter'); 
-										}																						
-				   });	
-			 });
-		   </script>  
-        </div>	
+       
     </div>
     <div data-role="footer" data-theme="a">
     	<h1><a href="index.html" style="color:#FFFFFF; text-decoration:none;">www.mistress-diva-zarah.com</a></h1>
@@ -353,7 +388,7 @@
 <div data-role="page" id="viewvideo" data-theme="a">
 	<div data-role="header" data-theme="c">
     	<a href="index.html" data-rel="back" data-icon="arrow-l" data-theme="a"></a>
-    	<h1>Watch Trailer</h1>   
+    	<h1><img src="images/krone.png">Watch Trailer</h1>   
     </div>
 	  <div data-role="content" data-theme="a">
        <center>
