@@ -52,14 +52,34 @@ js/json2.js"></script>
         <div data-role="controlgroup" data-type="horizontal" align="center">
 			<a href="#sessionseite" data-role="button"  data-transition="flip" data-theme="b"><img src="images/twitter.png">&nbsp;Session</a>
 			<a href="#gallerymain" data-role="button"  data-transition="flip" data-theme="b">Gallery</a>
-            <a href="map.html" data-role="button"  data-transition="flip" data-theme="b">GeoCode</a>			
+            <a href="#maps" data-role="button"  data-transition="flip" data-theme="b">GeoCode</a>			
 		</div>
     </div>
     <div data-role="footer" data-theme="a" id="footer1">
-    	<h1><a href="http://www.misress-diva-zarah.com">www.mistress-diva-zarah.com</a></h1>
+    	<h1><a href="http://www.mistress-diva-zarah.com">www.mistress-diva-zarah.com</a></h1>
     </div>
 </div>
 <!-- Ende Startseite -->
+<!-- Begin Maps Karte -->
+<div id="maps" data-role="page" data-theme="a" style="height:100%;">
+    <script type="text/javascript">
+		$(document).delegate('#maps', 'pageshow', function () {
+		var the_height = ($(window).height() - $(this).find('[data-role="header"]').height() - $(this).find('[data-role="footer"]').height());
+		$(this).height($(window).height()).find('[data-role="content"]').height(the_height + 10);
+		});
+	</script>
+    <div data-role="header" data-theme="a">
+    	<a href="index.html" data-rel="back" data-icon="arrow-l" data-theme="a"></a>
+        <h1><img src="images/krone.png">&nbsp;Mistress Diva Zarah</h1>
+    </div>    
+    <div id="map" data-role="content" data-theme="a">
+    
+    </div>
+ <div data-role="footer" data-theme="a" id="footer1">
+    	<h1><a href="http://www.mistress-diva-zarah.com">www.mistress-diva-zarah.com</a></h1>
+    </div>
+</div>
+<!-- Ende Maps Karte -->
 <!-- Beginn Portraiseite -->
 <div data-role="page" id="portraitseite" data-theme="a">
 	<script type="text/javascript">
@@ -80,7 +100,7 @@ js/json2.js"></script>
      </div>
     </div>
     <div data-role="footer" data-theme="a" data-position="fixed" role="contentinfo">
-    	<h1>www.mistress-diva-zarah.com</h1>
+    	<h1><a href="http://www.mistress-diva-zarah.com">www.mistress-diva-zarah.com</a></h1>
     </div>
 </div>
 <!--Ende Portrait Seite -->
@@ -105,7 +125,7 @@ js/json2.js"></script>
 </div><!-- /navbar -->
     </div>
      <div data-role="footer" data-theme="a">
- 		<h1><a href="index.html" style="color:#FFFFFF; text-decoration:none;">www.mistress-diva-zarah.com</a></h1>
+ 		<h1><a href="http://www.mistress-diva-zarah.com">www.mistress-diva-zarah.com</a></h1>
     </div>
 </div>    
 <!-- Ende Fotoseite
@@ -141,7 +161,7 @@ js/json2.js"></script>
     	</div>
     </div>
     <div data-role="footer" data-theme="a">
-    	<h1><a href="index.html" style="color:#FFFFFF; text-decoration:none;">www.mistress-diva-zarah.com</a></h1>
+    	<h1><a href="http://www.mistress-diva-zarah.com">www.mistress-diva-zarah.com</a></h1>
     </div>
 </div>
 <!--Ende Gallery 1 -->
@@ -178,7 +198,7 @@ js/json2.js"></script>
     	</div>
     </div>
     <div data-role="footer" data-theme="a">
-    	<h1><a href="index.html" style="color:#FFFFFF; text-decoration:none;">www.mistress-diva-zarah.com</a></h1>
+    	<h1><a href="http://www.mistress-diva-zarah.com">www.mistress-diva-zarah.com</a></h1>
     </div>
 </div>
 <!-- Ende Gallery 2 -->
@@ -258,7 +278,7 @@ js/json2.js"></script>
           <center><a href="#" data-role="button" onClick="getList();" data-inline="true" data-theme="a">Reload Video List</a></center>
     </div>
     <div data-role="footer" data-theme="a">
-    	<h1><a href="index.html" style="color:#FFFFFF; text-decoration:none;">www.mistress-diva-zarah.com</a></h1>
+    	<h1><a href="http://www.mistress-diva-zarah.com">www.mistress-diva-zarah.com</a></h1>
     </div>
 </div>
 <!--Ende Videoseite -->
@@ -304,7 +324,7 @@ js/json2.js"></script>
      <center><h4>Get Full Member Video Access</h4></center>
     </div>
      <div data-role="footer" data-theme="a">
-    	<h1><a href="index.html" style="color:#FFFFFF; text-decoration:none;">www.mistress-diva-zarah.com</a></h1>
+    	<h1><a href="http://www.mistress-diva-zarah.com">www.mistress-diva-zarah.com</a></h1>
     </div>
 </div>
 <!--Ende membership -->
@@ -335,7 +355,7 @@ js/json2.js"></script>
        
     </div>
     <div data-role="footer" data-theme="a">
-    	<h1><a href="index.html" style="color:#FFFFFF; text-decoration:none;">www.mistress-diva-zarah.com</a></h1>
+    	<h1><a href="http://www.mistress-diva-zarah.com">www.mistress-diva-zarah.com</a></h1>
     </div>
 </div>
 <!--Ende Session Seite-->

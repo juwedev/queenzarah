@@ -29,10 +29,11 @@ border-top-right-radius: 9px; border-bottom-right-radius: 9px; border-bottom-lef
    			background-size:cover;  
 			height:100%px;
 }
-#membershipcont {
+
+#map {
 			background:black;
 			background-size:cover; 
-			background-image: url('../images/memberback.jpg');    	   			
+			background-image: url('../images/smvid.jpg');    	   			
 			height:100%px;
 }
 #sessionseitecontent {
